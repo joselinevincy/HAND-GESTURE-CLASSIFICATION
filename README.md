@@ -56,7 +56,7 @@ model = Sequential([
 model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 # 9.TRAIN THE MODEL..
-model.fit(train_generator, epochs=10, validation_data=test_generator)
+model.fit(train_generator, epochs=1, validation_data=test_generator)
 # OUTPUT BE LIKE FOR THE TRAINING PROGRESS AND EPOCHS..
 (Epoch 1/10
 X batches
@@ -64,7 +64,7 @@ X batches
 accuracy: 0.XX, val_accuracy: 0.YY
 
 # 10.SAVE THE MODEL..
-model.save('asl_alphabet_model.h5')
+model.save('my_cnn_model.h5')
 
 # 11.EVALUATE THE MODEL..
 loss, accuracy = model.evaluate(test_generator)
